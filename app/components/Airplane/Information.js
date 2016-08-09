@@ -91,7 +91,7 @@ class Information extends Component {
        );
     }
 
-    _renderHeader() {
+    _renderSectionHeader() {
       return (
           <View style={styles.headContainer}>
               <View style={styles.info}>
@@ -132,9 +132,10 @@ class Information extends Component {
         return (
           <View style={styles.container}>
               <ListView
+                enableEmptySections={true}
                 dataSource={dataSource}
                 renderRow={this._renderRow.bind(this)}
-                renderSectionHeader={this._renderHeader.bind(this)}
+                renderSectionHeader={this._renderSectionHeader.bind(this)}
                 renderSeparator={this._renderSeperator.bind(this)}
                 />
           </View>
